@@ -1,7 +1,7 @@
 FROM nginx:stable-alpine
 
 # for htpasswd command
-RUN apk add --no-cache \
+RUN apk --no-cache add \
       apache2-utils
 RUN rm -f /etc/nginx/conf.d/*
 
