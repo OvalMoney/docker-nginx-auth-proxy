@@ -1,6 +1,8 @@
 # Docker image of Nginx Proxy with Basic Auth
 
-[![Docker Repository on Quay](https://quay.io/repository/dtan4/nginx-basic-auth-proxy/status "Docker Repository on Quay")](https://quay.io/repository/dtan4/nginx-basic-auth-proxy)
+[[![Docker Automated build](https://img.shields.io/docker/automated/ovalmoney/docker-nginx-auth-proxy.svg)](https://hub.docker.com/r/ovalmoney/docker-nginx-auth-proxy/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/ovalmoney/docker-nginx-auth-proxy.svg)](https://hub.docker.com/r/ovalmoney/docker-nginx-auth-proxy/)
+[![Docker Build Status](https://img.shields.io/docker/build/ovalmoney/docker-nginx-auth-proxy.svg)](https://hub.docker.com/r/ovalmoney/docker-nginx-auth-proxy/)
 
 Simple HTTP Proxy with Basic Authentication
 
@@ -23,7 +25,7 @@ $ docker run \
     -e PROXY_PASS=https://www.google.com \
     -e SERVER_NAME=proxy.dtan4.net \
     -e PORT=80 \
-    quay.io/dtan4/nginx-basic-auth-proxy
+    ovalmoney/docker-nginx-auth-proxy
 ```
 
 Access to http://localhost:8080 , then browser asks you username and password.
@@ -36,18 +38,6 @@ $ docker-compose up
 # http://localhost:8080/
 # - Username: username
 # - Password: password
-```
-
-### Endpoint for monitoring
-
-`:8090/nginx_status` returns the metrics of Nginx.
-
-```sh-session
-$ curl localhost:8090/nginx_status
-Active connections: 1
-server accepts handled requests
- 8 8 8
-Reading: 0 Writing: 1 Waiting: 0
 ```
 
 ## Environment variables
@@ -69,10 +59,6 @@ Reading: 0 Writing: 1 Waiting: 0
 |`CLIENT_MAX_BODY_SIZE`|Value for `client_max_body_size` directive|`1m`|
 |`PROXY_READ_TIMEOUT`|Value for `proxy_read_timeout` directive|`60s`|
 |`WORKER_PROCESSES`|Value for `worker_processes` directive|`auto`|
-
-## Author
-
-Daisuke Fujita ([@dtan4](https://github.com/dtan4))
 
 ## License
 

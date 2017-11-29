@@ -1,7 +1,7 @@
-FROM nginx:1.11.9-alpine
+FROM nginx:stable-alpine
 
 # for htpasswd command
-RUN apk add --no-cache --update \
+RUN apk add --no-cache \
       apache2-utils
 RUN rm -f /etc/nginx/conf.d/*
 
@@ -13,9 +13,5 @@ ENV WORKER_PROCESSES auto
 
 COPY files/run.sh /
 COPY files/nginx.conf.tmpl /
-
-# use SIGQUIT for graceful shutdown
-# c.f. http://nginx.org/en/docs/control.html
-STOPSIGNAL SIGQUIT
 
 ENTRYPOINT ["/run.sh"]
