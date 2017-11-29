@@ -1,8 +1,8 @@
 # Docker image of Nginx Proxy with Basic Auth
 
-[[![Docker Automated build](https://img.shields.io/docker/automated/ovalmoney/docker-nginx-auth-proxy.svg)](https://hub.docker.com/r/ovalmoney/docker-nginx-auth-proxy/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/ovalmoney/docker-nginx-auth-proxy.svg)](https://hub.docker.com/r/ovalmoney/docker-nginx-auth-proxy/)
-[![Docker Build Status](https://img.shields.io/docker/build/ovalmoney/docker-nginx-auth-proxy.svg)](https://hub.docker.com/r/ovalmoney/docker-nginx-auth-proxy/)
+[![Docker Automated build](https://img.shields.io/docker/automated/ovalmoney/nginx-auth-proxy.svg)](https://hub.docker.com/r/ovalmoney/nginx-auth-proxy/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/ovalmoney/nginx-auth-proxy.svg)](https://hub.docker.com/r/ovalmoney/nginx-auth-proxy/)
+[![Docker Build Status](https://img.shields.io/docker/build/ovalmoney/nginx-auth-proxy.svg)](https://hub.docker.com/r/ovalmoney/nginx-auth-proxy/)
 
 Simple HTTP Proxy with Basic Authentication
 
@@ -25,7 +25,7 @@ $ docker run \
     -e PROXY_PASS=https://www.google.com \
     -e SERVER_NAME=proxy.dtan4.net \
     -e PORT=80 \
-    ovalmoney/docker-nginx-auth-proxy
+    ovalmoney/nginx-auth-proxy
 ```
 
 Access to http://localhost:8080 , then browser asks you username and password.
